@@ -1,0 +1,109 @@
+// Import Global Rules
+@use "./sass/layout/global-rules";
+
+// Import Pages
+@use "./sass/pages/contact";
+
+// Import Variables
+@use "./sass/variables/colors" as *;
+
+// Import Function
+@use "./sass/helpers/functions" as *;
+
+// Import Mixin
+@use "./sass/helpers/mixins" as *;
+
+@media (max-width: 767px) {
+  .side-bare {
+    padding: 20px;
+  }
+}
+
+%main-box {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+$direction: "top";
+
+.arrow-div {
+  @extend %main-box;
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: 50px auto;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if ($direction == "top") {
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-color: red;
+    } @else if ($direction == "right") {
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left-color: red;
+    } @else if ($direction == "left") {
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right-color: red;
+    } @else if ($direction == "bottom") {
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top-color: red;
+    } @else {
+      @error "This direction is ot correct";
+    }
+  }
+}
+
+// test
+$width: 200px;
+
+.test {
+  width: $width;
+  height: half($width);
+  top: calculate(100px, 200px, 50px);
+}
+
+@include KeyF(fade-in) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@include KeyF(go-up) {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100px;
+  }
+}
+
+.media-test {
+  @include breakpoint(mobille) {
+    font-size: 15px;
+  }
+  @include breakpoint(small) {
+    font-size: 20px;
+  }
+  @include breakpoint(medium) {
+    font-size: 25px;
+  }
+  @include breakpoint(large) {
+    font-size: 30px;
+  }
+}
