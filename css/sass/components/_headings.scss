@@ -1,0 +1,23 @@
+.head-with-border {
+  position: relative;
+  h2 {
+    background-color: $redColor;
+    text-align: center;
+    color: #fff;
+    margin: 40px auto;
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $greyColor;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+    }
+  }
+}
