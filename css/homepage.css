@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .head-with-border {
   position: relative;
 }
@@ -116,3 +120,55 @@ ol {
 }
 
 /*End Slider*/
+/*Start Services*/
+.services .services-box {
+  float: left;
+  width: 33.3333333333%;
+}
+.services .services-box:not(:last-of-type) {
+  padding-right: 20px;
+}
+.services .services-box .service-title {
+  color: #666;
+}
+.services .services-box .service-title i {
+  font-size: 35px;
+  position: relative;
+  top: 4px;
+}
+.services .services-box .sevice-desc {
+  color: #777;
+  line-height: 1.5;
+}
+.services .services-box .link {
+  color: #e2494c;
+  text-decoration: none;
+}
+
+/*End Services*/
+/*Start Our Players*/
+.our-players .player-box {
+  float: left;
+  width: 20%;
+  padding-right: 20px;
+}
+.our-players .player-box .player-img {
+  max-width: 100%;
+}
+.our-players .player-box .player-title {
+  color: #666;
+  font-weight: normal;
+}
+.our-players .player-box .player-title span {
+  font-weight: bold;
+}
+.our-players .player-box .player-desc {
+  color: #777;
+  line-height: 1.5;
+}
+.our-players .player-box .link {
+  color: #e2494c;
+  text-decoration: none;
+}
+
+/*End Our Players*/

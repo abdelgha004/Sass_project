@@ -37,3 +37,59 @@
   }
 }
 /*End Slider*/
+
+/*Start Services*/
+.services {
+  .services-box {
+    float: $float-left;
+    width: (100% / 3);
+    &:not(:last-of-type) {
+      padding-right: 20px;
+    }
+    .service-title {
+      color: #666;
+      i {
+        font-size: 35px;
+        position: relative;
+        top: 4px;
+      }
+    }
+    .sevice-desc {
+      color: #777;
+      line-height: 1.5; // Fix the comma
+    }
+    .link {
+      color: $redColor;
+      text-decoration: none;
+    }
+  }
+}
+/*End Services*/
+/*Start Our Players*/
+.our-players {
+  .player-box {
+    float: $float-left;
+    width: (100% / 5);
+    padding-right: 20px;
+    .player-img {
+      max-width: 100%;
+    }
+    .player-title {
+      color: #666;
+      font-weight: normal;
+
+      span {
+        font-weight: bold;
+      }
+    }
+    .player-desc {
+      color: #777;
+      line-height: 1.5;
+    }
+    .link {
+      color: $redColor;
+      text-decoration: none;
+    }
+  }
+}
+/*End Our Players*/
