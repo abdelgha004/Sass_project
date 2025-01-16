@@ -8,6 +8,31 @@
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
+}
+
+.head-with-border {
+  position: relative;
+}
+.head-with-border h2 {
+  background-color: #e2494c;
+  text-align: center;
+  color: #fff;
+  margin: 40px auto;
+  width: 400px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+.head-with-border h2:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #9c9c9c;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
 }
 
 body {
@@ -48,6 +73,7 @@ ol {
   text-align: center;
 }
 .header .navbar li a {
+  text-transform: uppercase;
   display: block;
   padding: 20px 10px;
   text-decoration: none;
