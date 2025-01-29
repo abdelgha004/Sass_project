@@ -54,7 +54,7 @@
         top: 4px;
       }
     }
-    .sevice-desc {
+    .service-desc {
       color: #777;
       line-height: 1.5; // Fix the comma
     }
@@ -93,3 +93,19 @@
   }
 }
 /*End Our Players*/
+
+/*Start Lorem Ipsum*/ 
+.lorem-ipsum {
+  .lorem-box {
+    float: $float-left;
+    width: (94% / 3);
+    &:not(:last-of-type){
+      margin-right: 3%;
+    }
+  }
+  .lorem-img { 
+    max-width: 100%;
+
+  }
+}
+/*End Lorem Ipsum*/ 
