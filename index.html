@@ -15,6 +15,11 @@
         <div class="logo">
           <h1>Composition</h1>
           <p>Free PSd Website Template</p>
+          <button class="the-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
         <ul class="navbar">
           <li><a href="#">Homepage</a></li>
@@ -184,10 +189,9 @@
         <div class="lorem-box">
           <img src="imgs/03.jpg" alt="image" class="lorem-img" />
         </div>
-      </div> 
+      </div>
     </div>
     <div class="clearfix"></div>
-
     <!-- End Lorem Ipsum -->
     <!-- Start Footer -->
     <div class="footer">
@@ -236,8 +240,8 @@
         <div class="contact">
           <h3 class="section-title">Contact us</h3>
           <form action="">
-            <input type="text" name="" placeholder="Name"/>
-            <input type="email" name="" placeholder="Email"/>
+            <input type="text" name="" placeholder="Name" />
+            <input type="email" name="" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
             <input class="main-button" type="submit" value="submit" />
           </form>
@@ -250,5 +254,13 @@
       </div>
     </div>
     <!-- End Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".the-toggler").on("click", function () {
+          $(".navbar").slideToggle();
+        });
+      });
+    </script>
   </body>
 </html>
