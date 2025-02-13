@@ -41,10 +41,18 @@
 /*Start Services*/
 .services {
   .services-box {
-    float: $float-left;
-    width: (100% / 3);
-    &:not(:last-of-type) {
-      padding-right: 20px;
+    @media #{$minMedium} {
+      float: $float-left;
+      width: (100% / 3);
+      &:not(:last-of-type) {
+        padding-right: 20px;
+      }
+      @media #{$maxMobile} {
+        i {
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
     }
     .service-title {
       color: #666;
@@ -68,9 +76,25 @@
 /*Start Our Players*/
 .our-players {
   .player-box {
-    float: $float-left;
-    width: (100% / 5);
-    padding-right: 20px;
+    @media #{$minSmall} {
+      float: $float-left;
+      width: (100% / 2);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    @media #{$minMedium} {
+      width: (100% / 3);
+      text-align: $text-left;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media #{$minLarge} {
+      width: (100% / 5);
+    }
+    @media #{$maxMobile} {
+      margin-bottom: 40px;
+    }
+
     .player-img {
       max-width: 100%;
     }
@@ -94,18 +118,19 @@
 }
 /*End Our Players*/
 
-/*Start Lorem Ipsum*/ 
+/*Start Lorem Ipsum*/
 .lorem-ipsum {
   .lorem-box {
-    float: $float-left;
-    width: (94% / 3);
-    &:not(:last-of-type){
-      margin-right: 3%;
+    @media #{$minSmall} {
+      float: $float-left;
+      width: (94% / 3);
+      &:not(:last-of-type) {
+        margin-right: 3%;
+      }
     }
   }
-  .lorem-img { 
+  .lorem-img {
     max-width: 100%;
-
   }
 }
-/*End Lorem Ipsum*/ 
+/*End Lorem Ipsum*/
